@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/action';
+import { createContact } from '../../redux/contacts/action';
 import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
@@ -9,7 +9,7 @@ export const ContactForm = () => {
     const dispatch = useDispatch();
     const contacts = useSelector(state => state.contacts);
 
-    const createContact = contact => dispatch(addContact(contact));
+    const createContact = contact => dispatch(createContact(contact));
     
 
     const handleInputChange = ({ target: { name, value } }) => {

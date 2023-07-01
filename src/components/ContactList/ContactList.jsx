@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { deleteContact, fetchContact } from '../../redux/action';
+import { deleteContact, fetchContact } from '../../redux/contacts/action';
 import { Contact } from 'components/Contact/Contact';
+import { useNavigate } from 'react-router-dom';
 
 import css from './ContactList.module.css';
 
@@ -11,11 +12,13 @@ export const ContactList = () => {
     const dispatch = useDispatch();
     const isLoading = useSelector(state => state.contacts.isLoading);
     const error = useSelector(state => state.contacts.error);
+    const navigate = useNavigate;
 
     useEffect(() => {
-        dispatch(fetchContact());
-    }, [dispatch]);
-
+        dispatch(fetchContact())
+            .unwrap()
+            .catch(() => navigate('/login'));
+    }, [dispatch, navigate]);
     const filteredContacts = () => 
         contacts.items.filter(contact =>
         contact.name.toLowerCase().includes(filter.toLowerCase()));
