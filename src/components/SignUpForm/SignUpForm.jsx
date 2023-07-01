@@ -24,7 +24,7 @@ export const SignUpForm = () => {
     return (
         <>
             <form onSubmit={handleSumbit}>
-                <div rmTitle>
+                <div>
                     Sign up <br />
                     It's quick and easy.
                 </div>
