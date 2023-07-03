@@ -26,7 +26,7 @@ export const ContactList = () => {
     const removeContact = id => dispatch(deleteContact(id));
 
     return (
-        <ul className={css.contactList}>
+        <div className={css.contactList}>
             {(error && <b>{error}</b>) ||
             (isLoading && <b>Please wait, loading is in progress...</b>) ||
             filteredContacts().map(contact => (
@@ -36,6 +36,6 @@ export const ContactList = () => {
                     deleteContact={removeContact} />
                 </li>
             ))}
-        </ul>
+        </div>
     );
 };

@@ -1,12 +1,11 @@
 .formContactForm {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    margin-top: 10px;
+    flex-direction: column;
     gap: 6px;
-    flex-wrap: wrap;
     width: 100%;
-    padding: 14px;
-    border: 1px solid black;
+    padding: 12px;
+    border: 1px solid #212121;
     border-radius: 12px;
 }
 
@@ -28,7 +27,7 @@ justify-content: space-between;
 }
 
 .btnAddContact {
-    margin: auto;
+    margin: 8px auto;
     padding: 6px;
     width: 124px;
     border-radius: 16px;

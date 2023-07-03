@@ -1,6 +1,7 @@
 .filterWrapper {
     width: 100%;
     padding: 0 10px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
