@@ -9,8 +9,8 @@ export const Filter = () => {
 
 
     return(
-        <div className={css.filter}>
-            <p className={css['filter-text']}>Find contacts by name</p>
+        <div className={css.filterWrapper}>
+            <p htmlFor="filter">Search</p>
             <input className={css.input}
                 type="text"
                 name="filter"

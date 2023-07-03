@@ -1,7 +1,9 @@
-.filter {
-    outline: none;
-    display: inline-grid;
-    margin-bottom: 10px;
+.filterWrapper {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .filter-text {
@@ -10,7 +12,9 @@
 }
 
 .input {
-    border-block-color: inherit;
-    outline: none;
-    text-align: left;
+    width: 80%;
+    padding: 5px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    font-size: 14px;
 }
