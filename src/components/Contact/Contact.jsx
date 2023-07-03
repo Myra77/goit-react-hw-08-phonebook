@@ -5,7 +5,8 @@ export const Contact = ({ contact: { id, name, number }, deleteContact }) => {
     return (
         <ul>
             <li className={css['contact-wrapper']}>
-                {name}: <span>{number}</span>
+                <p className={css.contactName}>{name}:</p>
+                <p className={css.contactNumber}>{number}</p>
                 <button type="submit" className={css.btnDelete} onClick={() => deleteContact(id)}>Delete</button>
             </li> 
         </ul>        
