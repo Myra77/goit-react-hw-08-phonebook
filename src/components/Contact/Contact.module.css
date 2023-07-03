@@ -1,19 +1,20 @@
 .contact-wrapper {
     display: flex;
-    width: 360px;
+    width: 300px;
     justify-content: space-between;
     margin-bottom: 4px;
-    font-size: 500;
+    font-size: 400;
 }
 
 .delete-btn {
-    width: 100px;
+    width: 80px;
     height: 30px;
     padding: 4px;
     border: 1px solid grey;
     border-radius: 4px;
     cursor: pointer;
 };
+
 .delete-btn:hover, 
 .delete-btn:focus {
     background-color: tomato;

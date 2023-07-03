@@ -30,12 +30,12 @@ export const ContactForm = () => {
     
         return (
             <form
-                className={css.form}
+                className={css.formContactForm}
                 autoComplete="off"
                 onSubmit={handleSubmit}
             >
-            <label className={css['label-name']}>
-                <span className={css['label-text']}>Name</span>
+            <div className={css.wrapperContactForm}>
+            <label className={css.label} htmlFor="name">Name</label>
                 <input
                     className={css.input}
                     value={name}
@@ -46,9 +46,9 @@ export const ContactForm = () => {
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required
                 />
-            </label>
-            <label className={css['label-number']}>
-                <span className={css['label-text']}>Number</span>
+            </div>
+            <div className={css.wrapperContactForm}>
+            <label className={css.label} htmlFor="tel">Number</label>
                 <input
                     className={css.input}
                     value={number}
@@ -59,8 +59,8 @@ export const ContactForm = () => {
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required
                 />
-            </label>
-            <button className={css['btn-add']}>Add contact</button>
+            </div>
+            <button type="submit" className={css.btnAddContact}>Add contact</button>
         </form>
         );
 };

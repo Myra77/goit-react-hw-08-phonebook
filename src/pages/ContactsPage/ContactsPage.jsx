@@ -10,12 +10,12 @@ const ContactsPage = () => {
     const toggleHandler = () => setToggle(!toggle);
     return (
         <div className={css.wrapperContactsPage}>
-            <h1>Phonebook</h1>
+            <h1 className={css.titlePhonebook}>Phonebook</h1>
             {toggle && <ContactForm />}
             <p>Contacts</p>
             <Filter />
             <ContactList />
-            {toggle ? <button className={css.btnIconPlus} type="button" onClick={toggleHandler}><GoX></GoX></button> : <button type="button" onClick={toggleHandler}><GoPlus></GoPlus></button>}
+            {toggle ? <button className={css.btnIconPlus} type="button" onClick={toggleHandler}><GoX></GoX></button> : <button className={css.btnIconPlus} type="button" onClick={toggleHandler}><GoPlus></GoPlus></button>}
         </div>
     );
 }
