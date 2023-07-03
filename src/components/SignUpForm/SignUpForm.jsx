@@ -24,7 +24,7 @@ export const SignUpForm = () => {
 
     return (
         <>
-            <form className={css.signInForm} onSubmit={handleSumbit}>
+            <form className={css.signUpForm} onSubmit={handleSumbit}>
                 <p className={css.signInTitle}>Sign up</p>
                 <label htmlFor="email">Email</label>
                 <Input
@@ -60,6 +60,7 @@ export const SignUpForm = () => {
                         placeholder="Enter password"
                         name="password"
                         id="password"
+                        minLength="7"
                         isRequired
                     />
                     <InputRightElement width="4.5rem">

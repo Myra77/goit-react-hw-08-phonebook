@@ -5,7 +5,7 @@ export const signUp = createAsyncThunk(
     'users/signUp',
     async (body, thunkAPI) => {
         try {
-            const response = await api.baseInstance.post('users/signup', body);
+            const response = await api.baseInstance.post('/users/signup', body);
             api.setAuthHeader(response.data.token);
             return response.data;
         } catch (error) {
@@ -18,7 +18,7 @@ export const signIn = createAsyncThunk(
     'users/signIn',
     async (body, thunkAPI) => {
         try {
-            const response = await api.baseInstance.post('users/login', body);
+            const response = await api.baseInstance.post('/users/login', body);
             api.setAuthHeader(response.data.token);
             return response.data;
         } catch (error) {
@@ -29,7 +29,7 @@ export const signIn = createAsyncThunk(
 
 export const logout = createAsyncThunk('users/logout', async (_, thunkAPI) => {
     try {
-        await api.baseInstance.post('users/logout');
+        await api.baseInstance.post('/users/logout');
         api.clearAuthHeader();
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
@@ -47,7 +47,7 @@ export const refreshUser = createAsyncThunk(
         }
         try {
             api.setAuthHeader(persistedToken);
-            const response = await api.baseInstance.get('users/current');
+            const response = await api.baseInstance.get('/users/current');
             return response.data;
         } catch (error) {
             thunkAPI.rejectWithValue(error.message);
