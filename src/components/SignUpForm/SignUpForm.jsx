@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signUp } from '../../redux/auth/authAction';
 import { Link } from 'react-router-dom';
+import css from './SignUpForm.module.css';
 
 export const SignUpForm = () => {
     const dispatch = useDispatch();
@@ -23,11 +24,8 @@ export const SignUpForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSumbit}>
-                <div>
-                    Sign up <br />
-                    It's quick and easy.
-                </div>
+            <form className={css.signInForm} onSubmit={handleSumbit}>
+                <p className={css.signInTitle}>Sign up</p>
                 <label htmlFor="email">Email</label>
                 <Input
                     border="1px solid grey"
@@ -42,6 +40,7 @@ export const SignUpForm = () => {
                 />
                 <label htmlFor="name">User Name</label>
                 <Input
+                    border="1px solid grey"
                     focusBorderColor="pink.400"
                     pr="1.5rem"
                     mb="2"
@@ -84,7 +83,7 @@ export const SignUpForm = () => {
                 >
                     Register Now
                 </Button>
-                <Link to={'/login'}>Already have an account?</Link>
+                <Link to={'/login'} className={css.createAccount}>Already have an account?</Link>
             </form>
         </>
     );

@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { signIn } from '../../redux/auth/authAction';
 import { Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import css from './SignInForm.module.css';
 
 export const SignInForm = () => {
     const dispatch = useDispatch();
@@ -23,8 +24,8 @@ export const SignInForm = () => {
 
   return (
     <>
-        <form onSubmit={handleSumbit}>
-            <p>Sign in</p>
+        <form className={css.signInForm} onSubmit={handleSumbit}>
+            <p className={css.signInTitle}>Sign in</p>
             <label htmlFor="email">Email</label>
             <Input
                 focusBorderColor="pink.400"
@@ -71,7 +72,7 @@ export const SignInForm = () => {
             >
                 Login
             </Button>
-            <Link to={'/register'}>Create new account</Link>
+            <Link to={'/register'} className={css.createAccount}>Create new account</Link>
         </form>
     </>
   );

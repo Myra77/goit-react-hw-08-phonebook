@@ -1,0 +1,12 @@
+.wrapper {
+    margin: 24px auto;
+    width: 340px;
+}
+
+.headerLayout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid grey;
+}
